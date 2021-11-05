@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>myHotel</display-name>
+  
+  
+   <welcome-file-list>
+   <welcome-file>index.html</welcome-file>
+   
+   </welcome-file-list>
+ 
+
+	
+	<!-- Admin Servlet -->
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>com.hotel.customer.AdminServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Map all requests to the DispatcherServlet for handling -->
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<!-- Register Customer -->
+		<servlet>
+		<servlet-name>registration</servlet-name>
+		<servlet-class>com.hotel.customer.RegisterServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>registration</servlet-name>
+		<url-pattern>/registration</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Login Customer -->
+		<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.hotel.customer.LoginServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- LogOut Customer -->
+		<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>com.hotel.customer.User_LogoutServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+		<!-- Customer details edit -->
+		<servlet>
+		<servlet-name>Edit</servlet-name>
+		<servlet-class>com.hotel.customer.EditServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Edit</servlet-name>
+		<url-pattern>/edit</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- add to Cart -->
+	
+		<servlet>
+		<servlet-name>Cart</servlet-name>
+		<servlet-class>com.hotel.customer.CartServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Cart</servlet-name>
+		<url-pattern>/cart</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- Increase and decrease quantity -->
+		<servlet>
+		<servlet-name>Quantity</servlet-name>
+		<servlet-class>com.hotel.customer.QuantityIncrDecrServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Quantity</servlet-name>
+		<url-pattern>/quantity</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Remove from cart -->
+		<servlet>
+		<servlet-name>RemoveItem</servlet-name>
+		<servlet-class>com.hotel.customer.RemoveFromCartServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RemoveItem</servlet-name>
+		<url-pattern>/remove</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- OrderNow  -->
+		<servlet>
+		<servlet-name>OrderNow</servlet-name>
+		<servlet-class>com.hotel.customer.OrderNowServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>OrderNow</servlet-name>
+		<url-pattern>/onow</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Checkout  -->
+		<servlet>
+		<servlet-name>Checkout</servlet-name>
+		<servlet-class>com.hotel.customer.CheckoutServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Checkout</servlet-name>
+		<url-pattern>/checkout</url-pattern>
+	</servlet-mapping>
+	
+		<!-- Cancel Order  -->
+		<servlet>
+		<servlet-name>CancelOrder</servlet-name>
+		<servlet-class>com.hotel.customer.CancelOrderServlet</servlet-class>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CancelOrder</servlet-name>
+		<url-pattern>/cancel</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
